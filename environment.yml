@@ -1,0 +1,17 @@
+name: cricket_ai
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.9
+  - fastapi
+  - uvicorn
+  - pandas
+  - numpy
+  - faiss-cpu
+  - langchain
+  - openai
+  - pydantic
+  - pip
+  - pip:
+      - fastapi
