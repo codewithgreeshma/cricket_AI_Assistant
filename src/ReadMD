@@ -20,5 +20,15 @@ json_to_csv.py is to convert the json file directly to csv without any transform
 2. Large Language Model (LLM) Integration
 --------------------------------------------
 RAG pipeline is used for getting response for the user queries.
-LLM used is
+LLM used is Mistral-7B-Instruct-v0.1-GGUF
+VectorDB FAISS
 
+the script and implimations are available in src/main.py and RAG_pipeline.ipynb
+
+3. API Deployment & Chatbot Integration
+-------------------------------------------
+The code available in Main.py and Collections are available in CricketAI.postman_collection.json
+
+The possible Q&A are tested and got result.
+
+The Project is Scuccess full
