@@ -1,3 +1,10 @@
+"""
+1. Data Processing & Engineering
+
+here is the data processing and engineering part after collecting data from https://cricsheet.org/matches/
+Data received are in the json format and transformed the data with needed features in to CSV format.
+
+"""
 import pandas as pd
 import os
 from dotenv import load_dotenv
@@ -9,9 +16,12 @@ load_dotenv()
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
-DIRECTORY_PATH = os.getenv("DIRECTORY_PATH")
+# get constants from environment variables
+DIRECTORY_PATH = os.getenv("DIRECTORY_PATH")  # directory where json data files are stored.
 
+# to store all records related to match
 match_data_list = []
+# to store all records related to player
 player_data_list = []
 
 # Iterate over all subdirectories and JSON files
@@ -67,7 +77,8 @@ for root, _, files in os.walk(DIRECTORY_PATH):
                                     runs = delivery['runs']['batter']
 
                                     if batter not in batting_stats:
-                                        batting_stats[batter] = {"total_runs_achieved_by_player": 0, "sixes_by_player": 0,
+                                        batting_stats[batter] = {"total_runs_achieved_by_player": 0,
+                                                                 "sixes_by_player": 0,
                                                                  "team": team_of_player}
 
                                     batting_stats[batter]["total_runs_achieved_by_player"] += runs
@@ -125,12 +136,12 @@ try:
     else:
         df_player_data = pd.DataFrame()
         logging.warning("player_data_list is empty. Creating an empty DataFrame.")
-# df = pd.DataFrame(data["info"])
+    # df = pd.DataFrame(data["info"])
     try:
         df_match_data.to_csv(os.path.join(DIRECTORY_PATH, f"match_data.csv"), encoding='utf-8', index=False)
         df_player_data.to_csv(os.path.join(DIRECTORY_PATH, f"player_data.csv"), encoding='utf-8', index=False)
     except Exception as e:
-            logging.error(f"Error saving CSV files: {e}")
+        logging.error(f"Error saving CSV files: {e}")
 
 except Exception as e:
     logging.error(f"Error processing DataFrames: {e}")
