@@ -13,5 +13,6 @@ Data source - https://cricsheet.org/matches/   Test matches, One-day internation
               Indian Premier League data are colleccted, transformed and stored in src/data/cricket_data.
 The data after transformation are stored in csv format files - match_data.csv , player_data.csv
 
-Data transformation code are available in jupyter notebook and python script in locations utils/Data_transformation.ipynb and utils/feature_collection.py
+Data transformation code are available in jupyter notebook and python script in locations utils/Data_transformation.ipynb 
+        and utils/feature_collection.py
 
