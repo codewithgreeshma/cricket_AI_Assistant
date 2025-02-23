@@ -15,4 +15,10 @@ The data after transformation are stored in csv format files - match_data.csv , 
 
 Data transformation code are available in jupyter notebook and python script in locations utils/Data_transformation.ipynb 
         and utils/feature_collection.py
+json_to_csv.py is to convert the json file directly to csv without any transformations.
+
+2. Large Language Model (LLM) Integration
+--------------------------------------------
+RAG pipeline is used for getting response for the user queries.
+LLM used is
 
