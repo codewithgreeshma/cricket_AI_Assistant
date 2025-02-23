@@ -31,4 +31,4 @@ The code available in Main.py and Collections are available in CricketAI.postman
 
 The possible Q&A are tested and got result.
 
-The Project is Scuccess full
+The Project is Scuccessfull
