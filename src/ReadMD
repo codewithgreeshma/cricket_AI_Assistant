@@ -1,0 +1,17 @@
+Cricket Intelligence Assistant (CIA)
+--------------------------------------------
+LLM-powered Cricket Analytics System that can:
+1. Ingest & process cricket data (player stats, team performances, match records).
+2. Answer natural language queries related to cricket history, records, and player stats.
+3. Summarize key insights using an LLM-powered retrieval system.
+4. Deploy an interactive API or chatbot for cricket queries.
+
+1. Data Processing & Engineering
+--------------------------------------
+
+Data source - https://cricsheet.org/matches/   Test matches, One-day internationals, T20 internationals, CSA T20 Challenge, 
+              Indian Premier League data are colleccted, transformed and stored in src/data/cricket_data.
+The data after transformation are stored in csv format files - match_data.csv , player_data.csv
+
+Data transformation code are available in jupyter notebook and python script in locations utils/Data_transformation.ipynb and utils/feature_collection.py
+
